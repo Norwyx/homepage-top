@@ -67,7 +67,171 @@ Variables
     --white-clr: #f8fafc;
     --black-clr: #020617;
     --gray-clr: #4b5563;
+    --white-filter: invert(100%) sepia(57%) saturate(1058%) hue-rotate(179deg) brightness(104%) contrast(97%);
 
     --image-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     --card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+body {
+    font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+    color: var(--white-clr);
+    overflow-x: hidden;
+}
+
+.hero, .projects {
+    padding: 0 1.125rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--black-clr);
+}
+
+.social-icons {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    color: var(--black-clr);
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    box-shadow: var(--image-shadow);
+    filter: brightness(70%);
+    vertical-align: bottom;
+}
+
+.hero-bg {
+    background-color: var(--blue-clr);
+    width: 300vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-40%) translateY(-50%) rotate(-30deg);
+}
+
+
+
+/* 
+Main Styles
+*/
+
+.hero {
+    gap: 2rem;
+    margin-bottom: 6rem;
+    padding-top: 1.125rem;
+
+    .hero-image {
+        position: relative;
+    }
+
+    .hero-image p {
+        font-size: 4rem;
+        font-weight: 700;
+        padding: 1rem;
+        text-shadow: 2px 2px 4px var(--black-clr);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .hero-about p {
+        color: var(--gray-clr);
+        font-size: clamp(100%, 1rem + 2vw, 20px);
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        max-width: 43ch;
+    }
+}
+
+.projects {
+    margin-bottom: 6rem;
+
+    .projects-cards {
+        gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+        .card {
+            box-shadow: var(--card-shadow);
+            color: var(--black-clr);
+        
+            .card-top {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 700;
+                background-color: var(--blue-clr);
+                color: var(--white-clr);
+                height: 250px;
+            }
+
+            .card-bottom {
+                padding: 1.5rem 1.5rem 4rem 1.5rem;
+
+                .bottom-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 1.25rem;
+                    margin-bottom: 1rem;
+
+                    .top-icons {
+                        display: flex;
+                        gap: .625rem;
+                    }
+
+                    .link-icon {
+                        width: 28px;
+                    }
+
+                    .social-icon {
+                        font-size: 26px;
+                    }
+                }
+            }
+
+            .card-bottom p {
+                color: var(--gray-clr);
+            }
+        }
+    }
+}
+
+.contact {
+    background-color: var(--blue-clr);
+    
+    .contact-info {
+        gap: 2rem;
+        padding: 1rem 1.125rem 1.5rem 1.125rem;
+
+        .contact-address, .contact-phonemail {
+            gap: 4px;
+        }
+
+        .phone, .mail {
+            gap: .5rem;
+        }
+
+        .phone-icon, .mail-icon {
+            width: 20px;
+            filter: var(--white-filter);
+        }
+    }
+
+    .contact-info h2 {
+        color: var(--white-clr);
+        margin-bottom: -1rem;
+    }
+
+    .contact-info h2 + p {
+        font-size: 1.25rem;
+    }
 }

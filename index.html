@@ -10,7 +10,8 @@
 </head>
 <body>
     <main>
-        <section class="hero">
+        <div class="hero-bg"></div>
+        <section class="hero flex column">
             <div class="hero-image">
                 <img class="portrait" src="images/portrait.jpg" alt="Portrait">
                 <p>Ashley Williams</p>
@@ -30,7 +31,7 @@
         </section>
         <section class="projects">
             <h2>My work</h2>
-            <div class="projects-cards">
+            <div class="projects-cards grid">
                 <div class="card">
                     <div class="card-top">
                         <p>screenshot of the project</p>
@@ -124,20 +125,20 @@
             </div>
         </section>
         <section class="contact">
-            <div class="contact-info">
+            <div class="contact-info flex column">
                 <h2>Contact me</h2>
                 <p>Please get in touch if you think our work could be mutually beneficial!</p>
-                <div class="contact-address">
+                <div class="contact-address flex column">
                     <p>1234 Random Road</p>
                     <p>Random Town, California 12345</p>
                 </div>
-                <div class="contact-phonemail">
-                    <div class="phone">
-                        <img src="images/phone.svg" alt="">
+                <div class="contact-phonemail flex column">
+                    <div class="phone flex center-y">
+                        <img class="phone-icon" src="images/phone.svg" alt="">
                         <p>555-555-5555</p>
                     </div>
-                    <div class="mail">
-                        <img src="images/email-outline.svg" alt="">
+                    <div class="mail flex center-y">
+                        <img class="mail-icon" src="images/email-outline.svg" alt="">
                         <p>ashleywilliams.is.not.real@gmail.com</p>
                     </div>
                 </div>
