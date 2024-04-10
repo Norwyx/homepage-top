@@ -100,6 +100,7 @@ h2 {
 
 .portrait {
     width: 100%;
+    max-width: 400px;
     height: auto;
     box-shadow: var(--image-shadow);
     filter: brightness(70%);
@@ -114,6 +115,7 @@ h2 {
     top: 0;
     left: 0;
     transform: translateX(-40%) translateY(-50%) rotate(-30deg);
+    z-index: -3;
 }
 
 
@@ -129,6 +131,7 @@ Main Styles
 
     .hero-image {
         position: relative;
+        margin: auto;
     }
 
     .hero-image p {
@@ -145,7 +148,7 @@ Main Styles
         color: var(--gray-clr);
         font-size: clamp(100%, 1rem + 2vw, 20px);
         line-height: 1.4;
-        margin-bottom: 1.5rem;
+        margin: 0 auto 1.5rem auto;
         max-width: 43ch;
     }
 }
@@ -209,6 +212,8 @@ Main Styles
     background-color: var(--blue-clr);
     
     .contact-info {
+        margin: auto;
+        max-width: 400px;
         gap: 2rem;
         padding: 1rem 1.125rem 1.5rem 1.125rem;
 
@@ -233,5 +238,82 @@ Main Styles
 
     .contact-info h2 + p {
         font-size: 1.25rem;
+    }
+
+    .contact-image {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/* 
+Media Queries
+*/
+@media (min-width: 43.75rem) {
+    h2 {
+        text-align: left;
+    }
+
+    .hero-bg {
+        width: 300vw;
+        height: 100vh;
+        transform: translateX(-40%) translateY(-40%) rotate(-10deg);
+    }
+
+    .portrait {
+        width: 100%;
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    .hero {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+
+        .hero-image {
+            margin: 0;
+        }
+
+        .hero-image p {
+            font-size: clamp(24px, 1rem + 2vw, 48px);
+        }
+
+        .hero-about {
+            background-color: var(--white-clr);
+            box-shadow: var(--card-shadow);
+            padding: 1.5rem;
+            max-width: 60%;
+            margin: auto 0;
+
+            .about-icons {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .projects {
+        padding: 0 10%;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+
+        .contact-info {
+            margin: 0;
+
+            .contact-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        .contact-image {
+            padding: 1rem 1rem 1rem 0;
+        }
     }
 }
