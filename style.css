@@ -58,3 +58,16 @@ REUSABLES
 
 
 
+/* 
+Variables
+*/
+
+:root {
+    --blue-clr: #0284c7;
+    --white-clr: #f8fafc;
+    --black-clr: #020617;
+    --gray-clr: #4b5563;
+
+    --image-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    --card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
